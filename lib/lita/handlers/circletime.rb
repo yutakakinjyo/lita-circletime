@@ -16,22 +16,22 @@ module Lita
 
       def today(response)
         build_time = CircleTime::BuildTime.new(redis.get("org"))
-        response.reply("today's buil time is " + (build_time.today / 1000/ 60 ).to_s + " min")
+        response.reply("Today's buil time is " + (build_time.today / 1000/ 60 ).to_s + " min")
       end
 
       def yestaday(response)
         build_time = CircleTime::BuildTime.new(redis.get("org"))
-        response.reply("yestaday's buil time is " + (build_time.yestaday / 1000/ 60 ).to_s + " min")
+        response.reply("Yestaday's buil time is " + (build_time.yestaday / 1000/ 60 ).to_s + " min")
       end
 
       def week(response)
         build_time = CircleTime::BuildTime.new(redis.get("org"))
-        response.reply("week's buil time is " + (build_time.week / 1000/ 60 ).to_s + " min")
+        response.reply("This week's buil time is " + (build_time.week / 1000/ 60 ).to_s + " min")
       end
 
       def month(response)
         build_time = CircleTime::BuildTime.new(redis.get("org"))
-        response.reply("month's buil time is " + (build_time.month / 1000/ 60 ).to_s + " min")
+        response.reply("This month's buil time is " + (build_time.month / 1000/ 60 ).to_s + " min")
       end
 
       Lita.register_handler(self)
