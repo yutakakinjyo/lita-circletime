@@ -2,7 +2,10 @@
 
 [![Build Status](https://travis-ci.org/yutakakinjyo/lita-circletime.png?branch=master)](https://travis-ci.org/yutakakinjyo/lita-circletime)
 
-This gem let to share CircleCI's amount of build time to channel member by Lita.  
+This gem let to share CircleCI's amount of build time to channel member by Lita.
+
+![](images/lita_chat.png)
+
 Free plan of CircleCI limit is 1,500 min build time. So sometimes we want to know how many spend build time already.
 
 ## Installation
