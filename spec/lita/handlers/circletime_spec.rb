@@ -20,7 +20,7 @@ describe Lita::Handlers::Circletime, lita_handler: true do
     expect(replies.last).to eq("yutakakinjyo is setted to org now")
   end
 
-  it "show org name" do
+  it "show nothing org name message" do
     send_message("org")
     expect(replies.last).to eq("you not set org name yet")
   end
