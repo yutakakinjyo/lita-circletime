@@ -7,12 +7,20 @@ module Lita
       route(/^build week$/, :week)
       route(/^build month$/, :month)
       route(/^org\s+(.+)/, :set)
+      route(/^org$/, :show)
 
       def set(response)
         org = response.match_data[1]
         redis.set("org", org)
         response.reply("set " + org + " to org name")
       end
+
+      def show(response)
+        org = redis.get("org")
+        reply = org.nil? ? "you not set org name yet" : "#{org} is setted to org now"
+        response.reply(reply) 
+      end
+
 
       def today(response)
         build_time = CircleTime::BuildTime.new(redis.get("org"))
