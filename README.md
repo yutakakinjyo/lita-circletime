@@ -37,7 +37,7 @@ org <organization name>
 
 you can get build time
 
-- `org show` get current org name
+- `org` get current org name
 - `build today` get today's amount of build time
 - `build yestaday` get yestaday's amount of build time
 - `build week` get this week amount of build time
